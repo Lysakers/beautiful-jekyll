@@ -5,12 +5,12 @@ subtitle: All posts
 ---
 
 <table>
-    {% for post in site.posts %}
     <tr>
         <td>Date:</td>
         <td>Blog post title</td>
         <td>Category</td>
     </tr>
+        {% for post in site.posts %}
     <tr>
         <td><strong>{{ post.date | date: "%B %e, %Y" }}</strong></td>
         <td><a href="{{ post.url }}">{{ post.title }}</a></td>
