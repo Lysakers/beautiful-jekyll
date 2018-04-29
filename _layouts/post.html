@@ -75,7 +75,7 @@ layout: base
               {% capture pageCategory %}{{ page.category }}{% endcapture %}
               {% unless site.categories[pageCategory].size == 1 %}
                 <div class="row related-posts">
-                  <h3>Other posts in “{{ category }}”</h3>
+                  <h3>Other posts in “{{ page.category }}”</h3>
                     <ul>
                     {% for post in site.categories[pageCategory] limit:6 %}
                       {% unless post.title == page.title %}
