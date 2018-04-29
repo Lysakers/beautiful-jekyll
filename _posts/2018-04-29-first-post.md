@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 date: '2018-04-29'
 title: My first post
 Subtitle: Even with a subtitle
@@ -20,7 +20,7 @@ Get-ADgroupMember -filter * | foreach {
 
 And then a codeblock with lines mubers: 
 
-{% highlight javascript linenos %}
+{% highlight powershell linenos %}
 Get-ADgroupMember -filter * | foreach {
 	Get-ADsuer -identity $_
 }
