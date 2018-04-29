@@ -71,27 +71,42 @@ layout: base
         </div>
       {% endif %}
       
-        {% unless page.category == null %}
-        {% capture pageCategory %}{{ page.category }}{% endcapture %}
-        {% unless site.categories[pageCategory].size == 1 %}
-          <div class="row related-posts">
-            <h2 class="text-center">More {{ page.category }} Posts!</h2>
-            <div class="medium-12 small-12 columns">
-              {% for post in site.categories[pageCategory] limit:2 %}
-                {% unless post.title == page.title %}
+        <div class="relatedPosts">
 
-                 <h3>
-                  <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-                    {{ post.title }}
-                  </a>
-                 </h3>
+        <h4>You May Also Enjoy</h4> 
 
-                {% endunless %}
-              {% endfor %}
-            </div>
-          </div>
-        {% endunless %}
-      {% endunless %}
+        {% assign maxRelated = 3 %}
+        {% assign minCommonTags =  2 %}
+        {% assign maxRelatedCounter = 0 %}
+
+        {% for post in site.posts %}
+
+            {% assign sameTagCount = 0 %}
+            {% assign commonTags = '' %}
+
+            {% for category in post.categories %}
+              {% if post.url != page.url %}
+                {% if page.categories contains category %}
+                  {% assign sameTagCount = sameTagCount | plus: 1 %}
+                  {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+                  {% assign commonTags = commonTags | append: tagmarkup %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
+            {% if sameTagCount >= minCommonTags %}
+              <div>
+              <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></h5>
+              </div>
+              {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+              {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+              {% endif %}
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
 
     </div>
   </div>
