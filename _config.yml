@@ -140,7 +140,7 @@ timezone: "Europe/oslo"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 2
+paginate: 6
 
 kramdown:
   input: GFM
