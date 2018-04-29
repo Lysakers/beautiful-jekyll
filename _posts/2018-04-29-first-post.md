@@ -7,7 +7,7 @@ Subtitle: Even with a subtitle
 tags: [first post, markdown]
 ---
 
-Here is my first post, testing out 'markdowm' for creating blog posts.
+Here is my first post, testing out `markdowm` for creating blog posts.
 
 I am brand new to using markdown, but the general idea seems simple enough.  
 So lets test out a Powershell codeblock:
