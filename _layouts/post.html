@@ -97,9 +97,6 @@ layout: base
 
                             Published on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                           </li>
-                            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-                            {% if maxRelatedCounter >= maxRelated %}
-                            {% break %}
                         {% endunless %}
 
                       {% endfor %}
