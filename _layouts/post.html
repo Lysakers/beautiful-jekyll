@@ -71,40 +71,28 @@ layout: base
         </div>
       {% endif %}
       
-        <div class="related-posts">
-              {% assign maxRelated = 2 %}
-              {% assign maxRelatedCounter = 0 %}
-          
-                {% for category in page.categories %}
-                {% assign moreThanOneInCategory = false %}
-                {% assign posts = site.categories[category] %}
+        {% unless page.category == null %}
+        {% capture pageCategory %}{{ page.category }}{% endcapture %}
+        {% unless site.categories[pageCategory].size == 1 %}
+          <div class="row related-posts">
+            <h2 class="text-center">More {{ page.category }} Posts!</h2>
+            <div class="medium-12 small-12 columns">
+              {% for post in site.categories[pageCategory] limit:2 %}
+                {% unless post.title == page.title %}
 
-                {% for post in posts %}
-                  {% if forloop.length > 1 %}
-                    {% assign moreThanOneInCategory = true %}
-                  {% endif %}
-                {% endfor %}
+                 <h3>
+                  <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+                  </a>
+                 </h3>
 
-                {% if moreThanOneInCategory == true %}
-                  <div class="related-posts">
-                    <h3>Other posts archived in “{{ category }}”</h3>
-
-                    <ul>
-                      {% for post in posts %}
-                        {% unless post.url == page.url %}
-                          <li>
-                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-
-                            Published on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-                          </li>
-                        {% endunless %}
-
-                      {% endfor %}
-                    </ul>
-                  </div>
-                {% endif %}
+                {% endunless %}
               {% endfor %}
-        </div>
+            </div>
+          </div>
+        {% endunless %}
+      {% endunless %}
+
     </div>
   </div>
 </div>
