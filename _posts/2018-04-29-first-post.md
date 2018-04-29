@@ -20,7 +20,7 @@ Get-ADgroupMember -filter * | foreach {
 
 And then a codeblock with lines mubers: 
 
-{% highlight powershell linenos %}
+{% highlight javascript linenos %}
 Get-ADgroupMember -filter * | foreach {
 	Get-ADsuer -identity $_
 }
