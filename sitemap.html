@@ -7,8 +7,14 @@ subtitle: All posts
 <table>
     {% for post in site.posts %}
     <tr>
+        <td>Date:</td>
+        <td>Blog post title</td>
+        <td>Category</td>
+    </tr>
+    <tr>
+        <td><strong>{{ post.date | date: "%B %e, %Y" }}</strong></td>
         <td><a href="{{ post.url }}">{{ post.title }}</a></td>
-        <td><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} . </small></td>
+        <td><small> {{ post.category }}</small></td>
     </tr>
 {% endfor %} 
 </table>
