@@ -21,14 +21,14 @@ title: 'Tag Index'
         &nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})
     </h2>
     <div class="post-list">
-        <ul>
-        {%- for post in site.tags[tag] -%}
-            <div class="tag-entry">
+         <div class="tag-entry">   
+            <ul>
+            {%- for post in site.tags[tag] -%}
                 <li><strong><a href="{{- site.url -}}{{- post.url -}}">{{- post.title -}}</a></strong>
                  - <small>(<time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: "%B %d, %Y" -}}</time>)</small></li>
-            </div>
-        {%- endfor -%}
-        </ul>
+            {%- endfor -%}
+            </ul>
+        </div>
     </div>
 {%- endfor -%}
 </div>
