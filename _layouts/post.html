@@ -87,7 +87,7 @@ layout: base
                     <h3>Other posts archived in “{{ category }}”</h3>
 
                     <ul>
-                      {% for post in posts %}
+                      {% for post in paginator.posts %}
                         {% unless post.url == page.url %}
                           <li>
                             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
