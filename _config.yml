@@ -169,7 +169,7 @@ defaults:
 -
     scope:
       path: ""
-      type: drafts
+      type: "drafts"
     values:
       layout: "draft"
 
