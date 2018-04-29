@@ -72,6 +72,9 @@ layout: base
       {% endif %}
       
         <div class="related-posts">
+              {% assign maxRelated = 2 %}
+              {% assign maxRelatedCounter = 0 %}
+          
                 {% for category in page.categories %}
                 {% assign moreThanOneInCategory = false %}
                 {% assign posts = site.categories[category] %}
@@ -95,6 +98,9 @@ layout: base
                             Published on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                           </li>
                         {% endunless %}
+                            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                            {% if maxRelatedCounter >= maxRelated %}
+                            {% break %}
                       {% endfor %}
                     </ul>
                   </div>
