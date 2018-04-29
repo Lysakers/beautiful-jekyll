@@ -27,7 +27,6 @@ navbar-links:
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
-    - Drafts: "drafts"
     - GitHub Pages: "https://pages.github.com/"
   Sitemap: "sitemap.html"
 
@@ -134,11 +133,6 @@ excerpt_length: 50
 # and RSS feed title
 title-separator: "-"
 
-# --- Drafts collection for online drafts preview --- #
-collections:
-  drafts:
-    output: true
-
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
@@ -167,12 +161,6 @@ defaults:
     values:
       layout: "page"
       show-avatar: true
--
-    scope:
-      path: ""
-      type: "drafts"
-    values:
-      layout: "draft"
 
 # Use tags index page and make tags on each post clickable
 link-tags: true
