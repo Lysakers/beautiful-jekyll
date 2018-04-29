@@ -84,7 +84,7 @@ layout: base
                         <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
                           {{ post.title }}
                         </a>
-                         Published on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                          - Published on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                        </li>
 
                       {% endunless %}
