@@ -1,11 +1,7 @@
 ---
 layout: post
 published: false
-title: 2018-04-29-First-post
 date: '2018-04-29'
----
----
-layout: post
 title: My first post
 Subtitle: Even with a subtitle
 tags: [first post, markdown]
