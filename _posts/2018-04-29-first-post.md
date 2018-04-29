@@ -4,6 +4,7 @@ published: true
 date: '2018-04-29'
 title: My first post
 Subtitle: Even with a subtitle
+category: Testing
 tags: [first post, markdown]
 ---
 
