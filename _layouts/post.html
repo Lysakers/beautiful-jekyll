@@ -75,20 +75,20 @@ layout: base
               {% capture pageCategory %}{{ page.category }}{% endcapture %}
               {% unless site.categories[pageCategory].size == 1 %}
                 <div class="row related-posts">
-                  <h2 class="text-center">More {{ page.category }} Posts!</h2>
-                  <div class="medium-12 small-12 columns">
+                  <h3>Other posts in “{{ category }}”</h3>
+                    <ul>
                     {% for post in site.categories[pageCategory] limit:6 %}
                       {% unless post.title == page.title %}
 
-                       <h3>
+                       <li>
                         <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
                           {{ post.title }}
                         </a>
-                       </h3>
+                       </li>
 
                       {% endunless %}
                     {% endfor %}
-                  </div>
+                  </ul>
                 </div>
               {% endunless %}
             {% endunless %}
