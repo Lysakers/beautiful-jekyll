@@ -104,7 +104,7 @@ url-pretty: "lysaker.me"  # eg. "deanattali.com/beautiful-jekyll"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-118560292-1"
 
 # Google Tag Manager ID
 #gtm: ""
@@ -120,7 +120,7 @@ url-pretty: "lysaker.me"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#disqus: ""
+disqus: "my-take-on-powershell"
 
 # Facebook App ID
 # fb_app_id: ""
