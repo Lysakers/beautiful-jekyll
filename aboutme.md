@@ -10,7 +10,7 @@ Finding Powershell in the process of moving to Office 365, I am rather new to th
 
 ### my history
 
-{: .fa fa-graduation-cap}Originally studying IT, i found myself bored of school and jumped of my education.
+{: .fa-fa-graduation-cap}Originally studying IT, i found myself bored of school and jumped of my education.
 For several years i worked in logistics, before returning to IT a few years ago.
 Starting as 1. line support i have worked my way up to Office 365 administrator while still doing some support on 2. line and 3. line level.
 
