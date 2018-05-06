@@ -15,7 +15,8 @@ In order to succesfully only target the calendarfolder, we need to spesify it by
 get-mailboxfolderpermission -ideentity user@domain.com:\calendar
 ```
 
-Easy enough.  
+Easy enough.
+
 But when working with a mulit lanuguage tenant, the calendar folder is not promptly named `calendar` every single time.  
 Previously I would solve this either by running the commands two times, with each of the names.
 
@@ -33,4 +34,5 @@ In the past i would solve this using a simple if statement.
 if (get-mailboxfolderpermission -identity user@domain.com:\calendar)
   { Do-Someting}
 else
-  {
+  {  }
+```
