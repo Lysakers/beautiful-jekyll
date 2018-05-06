@@ -3,6 +3,8 @@ layout: post
 title: Working with calendars
 subtitle: Calendars in different languages
 meta_robots: noindex
+published: false
+category: calendar
 tags: [powershell, calendar, permissions]
 ---
 Since I live in Norway, working with calendar folders in Powershell gets tricky.  
