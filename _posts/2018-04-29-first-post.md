@@ -28,3 +28,4 @@ Get-ADgroupMember -filter * | foreach {
 }
 {% endhighlight %}
 
+`Testing new coloring for codeblocks`
