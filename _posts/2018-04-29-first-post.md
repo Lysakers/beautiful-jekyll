@@ -28,3 +28,6 @@ Get-ADgroupMember -filter * | foreach {
 {% endhighlight %}
 
 `Testing new coloring for codeblocks`
+
+Markdown seems like a decent way to type up blog posts and pages.  
+This will make a good way to do some blogging about Powershell.  
