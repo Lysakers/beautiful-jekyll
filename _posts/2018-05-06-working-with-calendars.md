@@ -2,8 +2,7 @@
 layout: post
 title: Working with calendars
 subtitle: Calendars in different languages
-meta_robots: noindex
-published: false
+date: 2018-05-06 21.00
 category: calendar
 tags: [powershell, calendar, permissions]
 ---
